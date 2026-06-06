@@ -14,7 +14,7 @@ Parameters:
 
 Resources:
 
-  ServerSecurityGroupClase:
+  ServerSecurityGroup-PR-Mariana:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: !Ref SecurityGroupDescription
@@ -35,7 +35,7 @@ Resources:
         - Key: Name
           Value: SG-HTTP-Clase-CF
 
-  MyEc2Github:
+  MyEc2Github-PR-Mariana:
     Type: AWS::EC2::Instance
     Properties:
 
@@ -43,11 +43,11 @@ Resources:
       InstanceType: t3.micro
 
       SecurityGroupIds:
-        - !Ref ServerSecurityGroupClase
+        - !Ref ServerSecurityGroup-PR-Mariana
 
       Tags:
         - Key: Name
-          Value: EC2-Clase-CF
+          Value: EC2-GitHub-PR-Mariana
 
         - Key: Proyecto
           Value: Class-CloudFormation
@@ -68,7 +68,7 @@ Resources:
 Outputs:
 
   InstanceId:
-    Value: !Ref MyEc2Github
+    Value: !Ref MyEc2Github-PR-Mariana
 
   PublicIP:
-    Value: !GetAtt MyEc2Github.PublicIp
+    Value: !GetAtt MyEc2Github-PR-Mariana.PublicIp
