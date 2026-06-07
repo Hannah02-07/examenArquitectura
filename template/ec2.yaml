@@ -14,7 +14,7 @@ Parameters:
 
 Resources:
 
-  ServerSecurityGroup-PR-Mariana:
+  ServerSecurityGroupPRMariana:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: !Ref SecurityGroupDescription
@@ -43,7 +43,7 @@ Resources:
       InstanceType: t3.micro
 
       SecurityGroupIds:
-        - !Ref ServerSecurityGroup-PR-Mariana
+        - !Ref ServerSecurityGroupPRMariana
 
       Tags:
         - Key: Name
@@ -68,7 +68,7 @@ Resources:
 Outputs:
 
   InstanceId:
-    Value: !Ref MyEc2Github-PR-Mariana
+    Value: !Ref MyEc2GithubPRMariana
 
   PublicIP:
-    Value: !GetAtt MyEc2Github-PR-Mariana.PublicIp
+    Value: !GetAtt MyEc2GithubPRMariana.PublicIp
