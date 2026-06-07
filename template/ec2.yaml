@@ -35,7 +35,7 @@ Resources:
         - Key: Name
           Value: SG-HTTP-Clase-CF
 
-  MyEc2Github-PR-Mariana:
+  MyEc2GithubPRMariana:
     Type: AWS::EC2::Instance
     Properties:
 
