@@ -1,5 +1,5 @@
 name: Destroy EC2
-
+#Este es un comentario de prueba para ver si se ejecuta el workflow
 on:
   workflow_dispatch:
 
